@@ -31,7 +31,9 @@ It also includes an **optional, subtle Dracula Pro–styled Octocat header logo*
 
 ## Screenshots
 
-*(Optional — add screenshots here if contributing upstream)*
+![github_repo](./assets/github_repo.png)
+
+![github_files](./assets/github_files.png)
 
 ---
 
