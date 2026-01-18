@@ -907,6 +907,74 @@ a:visited,
 }
 
 /* =========================================================
+   Files view: "Code" / "Blame" segmented control (Primer React)
+   ========================================================= */
+
+ul[aria-label="File view"][class*="prc-SegmentedControl-SegmentedControl"] {
+  background: #18171f !important;       /* Pro element background */
+  border: 1px solid #35304d !important; /* Pro border */
+  border-radius: 999px !important;
+  padding: 2px !important;
+}
+
+/* Base button */
+ul[aria-label="File view"][class*="prc-SegmentedControl-SegmentedControl"]
+  button[class*="prc-SegmentedControl-Button"] {
+  background: transparent !important;
+  color: #c9c3f5 !important;            /* unselected text (readable, slightly muted) */
+  border: 0 !important;
+  border-radius: 999px !important;
+  box-shadow: none !important;
+  padding: 0 12px !important;
+  min-height: 28px !important;
+}
+
+ul[aria-label="File view"][class*="prc-SegmentedControl-SegmentedControl"]
+  button[class*="prc-SegmentedControl-Button"] * {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Text node: always inherit button color */
+ul[aria-label="File view"][class*="prc-SegmentedControl-SegmentedControl"]
+  [class*="prc-SegmentedControl-Text"],
+ul[aria-label="File view"][class*="prc-SegmentedControl-SegmentedControl"]
+  .segmentedControl-text {
+  color: inherit !important;
+  font-weight: 600 !important;
+}
+
+/* Hover */
+ul[aria-label="File view"][class*="prc-SegmentedControl-SegmentedControl"]
+  button[class*="prc-SegmentedControl-Button"]:hover {
+  background: #464066 !important;       /* Pro hover */
+  color: #ffffff !important;
+}
+
+/* Selected state */
+ul[aria-label="File view"][class*="prc-SegmentedControl-SegmentedControl"]
+  li[data-selected] > button[class*="prc-SegmentedControl-Button"],
+ul[aria-label="File view"][class*="prc-SegmentedControl-SegmentedControl"]
+  button[aria-current="true"][class*="prc-SegmentedControl-Button"] {
+  background: #585080 !important;       /* Pro selected */
+  color: #ffffff !important;
+}
+
+/* Focus ring */
+ul[aria-label="File view"][class*="prc-SegmentedControl-SegmentedControl"]
+  button[class*="prc-SegmentedControl-Button"]:focus-visible {
+  outline: 2px solid #AFA0FF !important;
+  outline-offset: 2px !important;
+}
+
+/* Separator override */
+ul[aria-label="File view"][class*="prc-SegmentedControl-SegmentedControl"]
+  button[class*="prc-SegmentedControl-Button"] {
+  --separator-color: transparent !important;
+}
+
+/* =========================================================
    GitHub header logo — Dracula Pro Octocat (downward fangs)
    ========================================================= */
 
