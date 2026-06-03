@@ -977,26 +977,34 @@ ul[aria-label="File view"][class*="prc-SegmentedControl-SegmentedControl"]
    GitHub header logo — Dracula Pro Octocat (downward fangs)
    ========================================================= */
 
-/* Hide the original GitHub mark */
-a.AppHeader-logo svg.octicon-mark-github {
+/* Hide the original GitHub mark (GitHub changes this markup often) */
+a.AppHeader-logo svg.octicon-mark-github,
+a[href="/"][data-component="IconButton"] svg.octicon-mark-github,
+a[href="/"][class*="appHeaderHome"] svg.octicon-mark-github {
   opacity: 0 !important;
 }
 
 /* Prepare container */
-a.AppHeader-logo {
+a.AppHeader-logo,
+a[href="/"][data-component="IconButton"],
+a[href="/"][class*="appHeaderHome"] {
   position: relative !important;
-  padding-left: 40px !important;
 }
 
 /* Inject modified SVG */
-a.AppHeader-logo::before {
+a.AppHeader-logo::before,
+a[href="/"][data-component="IconButton"]::before,
+a[href="/"][class*="appHeaderHome"]::before {
   content: "";
   position: absolute;
-  left: 0;
+  left: 50%;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
   width: 32px;
   height: 32px;
+  display: block;
+  z-index: 1;
+  pointer-events: none;
 
   background-repeat: no-repeat;
   background-size: contain;
